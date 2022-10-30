@@ -1,4 +1,3 @@
-//------------------------------------------------------------------------------//
 OBJETIVO
 
 ● Criar uma interface web para marcar Destinos de Interesse.
@@ -21,7 +20,9 @@ para popular o select de países.
 ○ Fazer uma requisição GET para a rota: https://amazon-api.sellead.com/city para
 popular o select de cidades.
 
-//------------------------------------------------------------------------------//
+
+
+
 INFORMAÇÕES
 
 Framework:
@@ -31,4 +32,3 @@ Libs utilizadas:
 ●Axios  https://axios-http.com/                 - HTTP REQUEST
 ●React-select https://react-select.com/         - MULTIPLE OPTIONS SELECT
 
-//------------------------------------------------------------------------------//
