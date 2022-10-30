@@ -1,78 +1,84 @@
+//A form component to gather personal info from user
+
 import classes from "./PersonalForm.module.css";
-import { useState } from "react";
 
+//This child component receives the props form and setForm from MainPattern.js.
 
-export default function PersonalForm() {
-  const initialValues = { name: "", email: "", phone:"", personalDoc:""};
-  const [formValues, setFormValues] = useState(initialValues);
-  const [submit, setSubmit] = useState(false);
-
+export default function PersonalForm({ form, setForm }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formValues)
-    setSubmit(true);
+    setForm({ ...form, [name]: value });
   };
 
   return (
-    <div className="container">
-      {submit ? (
-        console.log("Formulário enviado!")
-      ) : (
-        null
-      )}
+    <div className={classes.container}>
 
-      <form onSubmit={handleSubmit} id="form1">
+      {/* <pre>{JSON.stringify(form)}</pre> || useful command to preview form data*/}
+
+      <form id="form1">
+
+        {/* Input that gathers user's name */}
+        
         <div className={classes.inputContainer}>
           <label className={classes.inputLabel}>Nome</label>
-          <input 
+          <input
             className={classes.input}
             type="text"
             name="name"
-            value={formValues.name}
+            value={form.name}
             onChange={handleChange}
             required
           />
         </div>
-        
+
+        {/* Input that gathers user's e-mail */}
+
         <div className={classes.inputContainer}>
           <label className={classes.inputLabel}>E-mail</label>
-          <input 
+          <input
             className={classes.input}
             type="email"
             name="email"
-            value={formValues.email}
+            value={form.email}
             onChange={handleChange}
             required
           />
         </div>
-        
+
+        {/* Input that gathers user's phone*/}
+
         <div className={classes.inputContainer}>
           <label className={classes.inputLabel}>Telefone</label>
-          <input 
+          <input
             className={classes.input}
             type="text"
             name="phone"
-            value={formValues.phone}
+            value={form.phone}
             onChange={handleChange}
             required
           />
         </div>
-        
+
+        {/* Input that gathers user's personal document*/}
+
         <div className={classes.inputContainer}>
           <label className={classes.inputLabel}>CPF</label>
-          <input 
+          <input
             className={classes.input}
             type="text"
             name="personalDoc"
-            value={formValues.personalDoc}
+            value={form.personalDoc}
             onChange={handleChange}
             required
           />
+        </div>
+
+        {/* A button to point input error when there is any. It triggers the "required" placed on inputs*/}
+
+        <div className={classes.buttonContainer}>
+          <button className={classes.validateButton}>
+            Validar informações
+          </button>
         </div>
       </form>
     </div>

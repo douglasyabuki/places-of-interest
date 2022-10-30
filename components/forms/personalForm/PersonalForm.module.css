@@ -1,0 +1,27 @@
+.buttonContainer {
+  margin: 0 auto;
+  text-align: center;
+}
+.validateButton {
+  font-weight: 700;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(31, 55, 86);
+  border: 2px solid hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 350px;
+}
+.inputLabel {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.input {
+  padding: 10px;
+  border-radius: 7.5px;
+}
