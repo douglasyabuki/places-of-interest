@@ -1,0 +1,12 @@
+.buttonContainer {
+  margin: 0 auto;
+}
+.submitButton {
+  font-weight: 700;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(31, 55, 86);
+  border: 2px solid hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}

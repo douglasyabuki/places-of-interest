@@ -1,0 +1,24 @@
+.mainContainer {
+  display: flexbox;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+}
+.formsContainer {
+  display: flex;
+  flex-direction: row;
+}
+.personalFormContainer,
+.placesFormContainer {
+  padding: 2em;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 7.5px;
+}
+.personalFormContainer {
+  margin-right: 90px;
+}
+
+.buttonContainer {
+  margin-top: 50px;
+  display: flex;
+}

@@ -1,0 +1,10 @@
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 350px;
+}
+.selectLabel {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
